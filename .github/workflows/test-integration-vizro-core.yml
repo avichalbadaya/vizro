@@ -40,7 +40,7 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: ${{ env.pythonLocation }}
           key: ${{ matrix.os }}-${{ matrix.python-version }}-${{ steps.branch-name.outputs.current_branch }}-pip-${{ hashFiles('hatch.toml') }}-${{ hashFiles('pyproject.toml') }}
